@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      width: 360px;
+      border: 1px solid #333;
+      padding: 30px 40px;
+      border-radius: 6px;
+      background: #111;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 42px;
+      font-family: "Brush Script MT", cursive;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: #000;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      background: #2e4fe6;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .divider span {
+      flex: 1;
+      height: 1px;
+      background: #333;
+    }
+
+    .divider p {
+      margin: 0 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .facebook-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      cursor: pointer;
+      color: #2d8cff;
+      font-size: 15px;
+    }
+
+    .forgot {
+      margin-top: 12px;
+      color: #2d8cff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .signup-box {
+      margin-top: 20px;
+      width: 360px;
+      text-align: center;
+      padding: 18px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #111;
+      font-size: 14px;
+    }
+
+    .signup-box a {
+      color: #2d8cff;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      width: 100%;
+    }
+
+    footer a {
+      margin: 0 8px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    @media (max-width: 450px) {
+      .login-container,
+      .signup-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="brand">Instagram</div>
+
+    <input type="text" placeholder="Phone number, username, or email" />
+    <input type="password" placeholder="Password" />
+
+    <button>Log in</button>
+
+    <div class="divider">
+      <span></span>
+      <p>OR</p>
+      <span></span>
+    </div>
+
+    <div class="facebook-login">Log in with Facebook</div>
+    <div class="forgot">Forgot password?</div>
+  </div>
+
+  <div class="signup-box">
+    Don't have an account? <a href="#">Sign up</a>
+  </div>
+
+  <footer>
+    <p>Meta • About • Blog • Jobs • Privacy • Terms • Locations • Help</p>
+    <p style="margin-top: 10px;">© 2025 InstaStyle</p>
+  </footer>
+
+</body>
+</html>
