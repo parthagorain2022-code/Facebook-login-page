@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Login UI</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Dark fade overlay */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+    }
+
+    .popup {
+        width: 420px;
+        max-width: 90%;
+        background: #1c1c1c;
+        color: #fff;
+        border-radius: 16px;
+        padding: 30px 35px;
+        z-index: 10;
+        box-shadow: 0 0 30px rgba(0,0,0,0.4);
+        animation: fadeIn 0.3s ease-in-out;
+        position: relative;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .popup .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 26px;
+        cursor: pointer;
+        color: #ccc;
+    }
+
+    .popup .icon {
+        font-size: 46px;
+        margin-bottom: 10px;
+        color: #ff5864;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .small-text {
+        font-size: 14px;
+        color: #ccc;
+        text-align: center;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 30px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: 0.2s ease;
+    }
+
+    .google-btn {
+        background: #fff;
+        color: #000;
+    }
+
+    .google-btn:hover {
+        background: #e6e6e6;
+    }
+
+    .fb-btn {
+        background: #232323;
+        color: #fff;
+        border: 1px solid #444;
+    }
+
+    .fb-btn:hover {
+        background: #2c2c2c;
+    }
+
+    .text-link {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .text-link a {
+        color: #67a6ff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .download-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .download-section p {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .store-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .store-buttons img {
+        width: 130px;
+        height: auto;
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    @media(max-width: 450px) {
+        .popup {
+            padding: 25px;
+        }
+        .btn {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- POPUP -->
+<div class="popup">
+    <div class="close-btn">&times;</div>
+
+    <div class="icon">❤️</div>
+
+    <h2>Get Started</h2>
+
+    <p class="small-text">
+        By tapping Log In or Continue, you agree to our Terms.
+        Learn how we handle your data in our Privacy Policy.
+    </p>
+
+    <button class="btn google-btn">
+        <img src="https://www.svgrepo.com/show/355037/google.svg" width="22">
+        Continue with Google
+    </button>
+
+    <button class="btn fb-btn">
+        <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" width="20">
+        Log in with Facebook
+    </button>
+
+    <div class="text-link">
+        <a href="#">Trouble Logging In?</a>
+    </div>
+
+    <div class="download-section">
+        <p>Get the app!</p>
+        <div class="store-buttons">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector(".close-btn").onclick = () => {
+        document.querySelector(".popup").style.display = "none";
+    };
+</script>
+
+</body>
+</html>
